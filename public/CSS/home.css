@@ -162,6 +162,9 @@ input:focus {
     color: #dcdada;
     padding: 2rem;
 }
+.footer p:hover {
+    color: #2a95f4;
+}
 .left-side {
     display: flex;
     align-items: center;
