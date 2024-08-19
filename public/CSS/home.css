@@ -103,9 +103,9 @@ input:focus {
 }
 .sh-url {
     color: #1d7dd2;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 .shortened-url {
     display: flex;
@@ -197,6 +197,14 @@ input:focus {
 .result .tooltip {
     opacity: 1;
 }
+@media (max-width: 1296px) {
+    .left {
+        padding-top: 1rem;
+    }
+    .right {
+        height: 17.4rem;
+    }
+}
 @media (max-width: 1078px) {
     h1 {
         font-size: 1.8rem;
@@ -239,10 +247,10 @@ input:focus {
         font-size: 1.8rem;
     }
     input {
-        width: 100%;
+        width: 70%;
     }
     .short {
-        width: 100%;
+        width: 70%;
         margin: 1rem auto;
     }
     
@@ -253,6 +261,7 @@ input:focus {
     .result {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
     .description {
         flex-direction: column;
@@ -267,20 +276,6 @@ input:focus {
     .left, .right {
         width: 99%;
     }
-    .result {
-        max-width: 100%;
-        margin: 1rem auto;
-        width: 85%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: white;
-        color: black;
-        text-align: left;
-        border-radius: 3px;
-        flex-wrap: wrap;
-    }
 }
 @media (max-width: 564px) {
     .right {
@@ -293,6 +288,13 @@ input:focus {
     .right img {
         height: 90px;
     }
+    input {
+        width: 100%;
+    }
+    .short {
+        width: 100%;
+        margin: 1rem auto;
+    }
     .container p {
         font-size: 0.7rem;
         width: 90%;
@@ -301,9 +303,14 @@ input:focus {
     .result .copy {
         width: 20%;
         margin-left: 0;
-        padding: 6px 8px;
+        padding: 6px 7px;
         margin-top: 0.4rem;
         margin-left: 0.8rem;
+        font-size: 1rem;
+    }
+    .result p {
+        font-size: 1.3rem;
+        margin-left: 15px;
     }
     .left h2{
         width: 100%;
@@ -324,6 +331,21 @@ input:focus {
         margin: 0 auto;
         margin-bottom: 2rem;
     }
+    .result {
+        max-width: 100%;
+        margin: 1rem auto;
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: white;
+        color: black;
+        text-align: left;
+        border-radius: 3px;
+        flex-wrap: wrap;
+        margin-bottom: 5rem;
+    }
     ul li {
         padding: 0;
     }
@@ -332,9 +354,6 @@ input:focus {
         margin-bottom: 2rem;
         padding: 0 0.7rem;
         font-size: 0.9rem;
-    }
-    .result {
-        margin-bottom: 5rem;
     }
     .footer {
         font-size: 0.5rem;
