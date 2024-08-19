@@ -126,7 +126,7 @@ input:focus {
 }
 .left {
     background-color: #f1f0f0;
-    padding: 3rem;
+    padding: 2rem;
     width: 50%;
     margin-bottom: 1rem;
 }
@@ -144,9 +144,9 @@ input:focus {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
+    padding: rem;
     width: 50%;
-    height: 17.7rem; 
+    height: 15.7rem; 
     flex-wrap: wrap;
 }
 .right p {
