@@ -1,0 +1,127 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-container {
+    background-color: #133552;
+    color: #fff;
+    height: 5rem;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+nav ul li {
+    padding: 0 1rem;
+    margin: 2rem 0;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+li a:hover {
+    color: #3898ec;
+}
+h1 {
+    font-size: 2.3rem;
+    margin: 24px;
+    margin-bottom: 32px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #333;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Responsive Table Container */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Table Styles */
+.urls-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.urls-table th, .urls-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.urls-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.urls-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.urls-table tr:hover {
+    background-color: #e6f7ff;
+}
+
+.no-urls {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .urls-table th, .urls-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .urls-table th, .urls-table td {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    
+    .urls-table th {
+        font-size: 0.95rem;
+    }
+}

@@ -2,6 +2,7 @@ const shortid = require("shortid");
 const { URL } = require("../models/url.model");
 
 const handleURL = async (req, res) => {
+
     const body = req.body;
     if(!body.url) {
         return res.status(400).json({error: 'url is required'})
@@ -14,6 +15,7 @@ const handleURL = async (req, res) => {
         shortId: shortID,
         redirectURL: redirectURL,
         visitHistory: [],
+        createdBy: req.user._id,
     })
     res.render('home', {
         id: shortID,
