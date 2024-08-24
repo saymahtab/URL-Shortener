@@ -18,7 +18,7 @@ const handleUserLogin = async (req, res) => {
             error: 'Invalid Username or Passward',
         })
     }
-    const token = generateToken(user._id);
+    const token = generateToken(user); 
 
     res.cookie('uid', token)
     res.redirect('/')

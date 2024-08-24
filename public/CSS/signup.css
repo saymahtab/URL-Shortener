@@ -18,11 +18,6 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: #0d3b66;
-    transition: transform 0.3s ease-in-out;
-}
-
-.signup-container:hover {
-    transform: translateY(-5px);
 }
 
 .signup-form {

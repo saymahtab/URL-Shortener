@@ -7,19 +7,25 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
-.container {
+header {
     background-color: #133552;
-    color: #fff;
-    padding-bottom: 1rem;
 }
-nav ul {
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5rem;
+}
+.nav-bar .logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav-bar ul {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
-    flex-wrap: wrap;
 }
-nav ul li {
+.nav-bar li {
     padding: 0 1rem;
     margin: 2rem 0;
 }
@@ -30,10 +36,58 @@ li a {
 li a:hover {
     color: #3898ec;
 }
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+.nav-buttons a {
+    text-decoration: none;
+    color: white;
+}
+.nav-buttons button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background-color: #00AEEF;
+}
+.nav-buttons button a:hover {
+    color: #001F3F;
+}
+
+.nav-buttons button:first-child {
+    border-color: #007BFF;
+}
+
+.nav-buttons button:first-child:hover {
+    background-color: #007BFF;
+}
+
+.nav-buttons button:last-child {
+    border-color: #FF4136;
+}
+
+.nav-buttons button:last-child:hover {
+    background-color: #FF4136;
+}
+.container {
+    background-color: #133552;
+    color: #fff;
+    padding: 0.5rem 0;
+}
 h1 {
     font-size: 2.3rem;
     margin: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 .para {
     color: rgb(171, 169, 169);
@@ -41,7 +95,7 @@ h1 {
     font-family: 'poppins';
 }
 .p2 {
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 .copy {
     background-color: #133552;
@@ -57,12 +111,12 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1.3rem;
-    margin-top: 0.7rem;
+    margin: 1.2rem;
+    margin-top: 0.5rem;
     flex-wrap: wrap;
 }
 input {
-    width: 32.2%;
+    width: 50%;
     min-width: 10rem;
     padding: 15px;
     border-radius: 3px;
@@ -88,9 +142,8 @@ input:focus {
 }
 
 .result {
-    max-width: 50%;
     margin: 1rem auto;
-    width: 44%;
+    width: 61.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,7 +175,7 @@ input:focus {
     justify-content: space-around;
     padding: 1rem;
     text-align: left;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     flex-wrap: wrap;
 }
 .left {
@@ -155,6 +208,48 @@ input:focus {
     font-size: 1.6rem;
     line-height: 2.1rem;
 }
+
+/* extra information */
+
+  /* Section Styles */
+  .section {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section-light {
+    background-color: #fff;
+  }
+  
+  .section-dark {
+    background-color: #f4f4f4;
+  }
+  .last {
+    margin-bottom: 8rem;    
+  }
+  
+  .section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .section ul li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+
 .footer {
     background-color: #444445;
     display: flex;

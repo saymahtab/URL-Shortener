@@ -22,5 +22,8 @@
     "nanoid": "^5.0.7",
     "shortid": "^2.2.16",
     "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }

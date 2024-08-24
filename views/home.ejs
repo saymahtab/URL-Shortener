@@ -9,16 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="/assets/Flink2.png" alt="png" height="60">
+            </div>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/stats">Stats</a></li>
                 <li><a href="/myUrls">myUrls</a></li>
             </ul>
+            <div class="nav-buttons">
+                <button><a href="/login">Login</a></button>
+                <button><a href="/signup">Signup</a></button>
+            </div>
         </nav>
+    </header>
+    <div class="container">
         <h1>Free URL <span style="color: #37a0fb;">Shortener</span></h1>
-        <p class="para">Free tool to shortenURLs. Create a short & memorable links in seconds.</p>
+        <p class="para">Flink is a Free tool to shortenURLs. Create a short & memorable links in seconds.</p>
         <form method="POST" action="/url">
             <input 
                 type="text" 
@@ -36,7 +45,7 @@
                 <p class="copy" id="copyButton">Copy</p>
             <% } %>
         </div>
-        <p class="para p2">By clicking Shorten URL, you agree to Rebrandly's <u>Terms of Use</u>, <u>Privacy Policy</u> and <u>Cookie Policy</u></p>
+        <p class="para p2">By clicking Shorten URL, you agree to our <u>Terms of Use</u>, <u>Privacy Policy</u> and <u>Cookie Policy</u></p>
     </div>
     <div class="description">
         <div class="left">
@@ -48,6 +57,48 @@
             <p>Experience the <b>benefits of link</b> management for your business</p>
         </div>
     </div>
+
+    <div class="section section-dark">
+        <h2>How It Works</h2>
+        <p>Our URL shortener takes your long, unwieldy links and transforms them into short, easy-to-share URLs. Simply paste your link, click 'Shorten URL,' and your new link is ready to be shared across all your social media platforms, emails, and more.</p>
+      </div>
+    
+      <!-- Section 2: Why Use Our URL Shortener? -->
+      <div class="section section-light">
+        <h2>Why Use Our URL Shortener?</h2>
+        <ul>
+          <li>- Shorten long URLs with ease</li>
+          <li>- Track the performance of your links</li>
+          <li>- Customize your short URLs for branding</li>
+          <li>- Completely free to use</li>
+        </ul>
+      </div>
+    
+      <!-- Section 3: Features -->
+      <div class="section section-dark">
+        <h2>Features</h2>
+        <p>Our service is packed with features that make managing and sharing your URLs simple and efficient:</p>
+        <ul>
+          <li>- Easy URL management dashboard</li>
+          <li>- Real-time analytics to track clicks and engagement</li>
+          <li>- API access for developers</li>
+          <li>- Customizable short URLs</li>
+          <li>- Mobile-friendly interface</li>
+        </ul>
+      </div>
+    
+      <!-- Section 4: Security -->
+      <div class="section section-light">
+        <h2>Security</h2>
+        <p>We take your security seriously. Our URL shortener is designed with multiple layers of protection to ensure your links are safe and secure. Every link you create is encrypted, and we offer options to add password protection to your URLs.</p>
+      </div>
+    
+      <!-- Section 5: Get Started -->
+      <div class="section section-dark last">
+        <h2>Get Started Now</h2>
+        <p>Ready to start shortening your URLs? Simply enter your long URL above and click 'Shorten URL' to get started. It’s fast, easy, and completely free!</p>
+      </div>
+
     <footer>
         <div class="footer">
             <div class="left-side">
