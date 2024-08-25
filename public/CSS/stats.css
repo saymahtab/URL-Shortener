@@ -237,6 +237,7 @@ input:focus {
     transition: transform 0.3s ease-in-out;
     border: 1px solid #133552;
     margin-top: 7rem;
+    overflow: scroll;
 }
 
 .stats:hover {
