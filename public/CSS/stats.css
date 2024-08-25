@@ -98,7 +98,7 @@ li a:hover {
     background-color: #05223e;
     width: 15rem;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     z-index: 20;
     padding: 10px;
     left: -17rem;
