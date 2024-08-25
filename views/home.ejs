@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free URL Shortener</title>
-    <link rel="shortcut icon" href="/assets/link.png" type="image/x-icon">
-    <link rel="stylesheet" href="/CSS/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="shortcut icon" href="/assets/link.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/CSS/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
     <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src="/assets/Flink2.png" alt="png" height="60">
-            </div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/stats">Stats</a></li>
-                <li><a href="/myUrls">myUrls</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <button><a href="/login">Login</a></button>
-                <button><a href="/signup">Signup</a></button>
-            </div>
-        </nav>
+      <nav class="nav-bar">
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <a href="/"><img src="/assets/Flink2.png" alt="png" height="60" /></a>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/stats">Stats</a></li>
+          <li><a href="/myUrls">myUrls</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <a href="/login" class="button-link">Login</a>
+          <a href="/signup" class="button-link">Signup</a>
+        </div>
+      </nav>
     </header>
-    <div class="container">
-        <h1>Free URL <span style="color: #37a0fb;">Shortener</span></h1>
-        <p class="para">Flink is a Free tool to shortenURLs. Create a short & memorable links in seconds.</p>
-        <form method="POST" action="/url">
-            <input 
-                type="text" 
-                placeholder="Enter link here"
-                name="url"
-            >
-            <button class="short" type="submit">Shorten URL</button>
-        </form>
-        <div class="result">
-            <% if(locals.id) { %>
-                <p class="sh-url"><a target="_blank" href="https://flink-n946.onrender.com/<%= id %>">flink.ly/<%= id  %></a></p>
-                <p class="copy" id="copyButton">Copy</p>
-            <% } else { %>
-                <p class="sh-url"><a target="_blank" href="https://flink-n946.onrender.com/YHRul4nLv">flink.ly/YHRul4nLv</a></p>
-                <p class="copy" id="copyButton">Copy</p>
-            <% } %>
+
+    <div class="side-bar">
+        <div class="icon-logo">
+            <div class="side-bar-logo">
+                <a href="/"><img src="/assets/Flink2.png" alt="png" height="60" /></a>
+            </div>
+            <div class="cross-icon">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
-        <p class="para p2">By clicking Shorten URL, you agree to our <u>Terms of Use</u>, <u>Privacy Policy</u> and <u>Cookie Policy</u></p>
-    </div>
-    <div class="description">
-        <div class="left">
-            <h2>A fast and simple URL shortener</h2>
-            <p>Free URL Shortener for transforming long, ugly links into nice, memorable and trackable short URLs. Use it to shorten links for any social media platforms, blogs, SMS, emails, ads, or pretty much anywhere else you want to share them. Twitter, Facebook, YouTube, Instagram, WhatsApp, emails, SMS, videos. RB.GY is the best free alternative to generic URL shorteners like bitly and tinyurl. After shorterning the URL, check how many clicks it received.</p>
-        </div>
-        <div class="right">
-            <img src="/assets/link.png" alt="link-png" height="120">
-            <p>Experience the <b>benefits of link</b> management for your business</p>
-        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/myUrls">myUrls</a></li>
+        </ul>
+        <div class="side-bar-buttons">
+            <a href="/login" class="button-link">Login</a>
+            <a href="/signup" class="button-link">Signup</a>
+          </div>
     </div>
 
-    <div class="section section-dark">
-        <h2>How It Works</h2>
-        <p>Our URL shortener takes your long, unwieldy links and transforms them into short, easy-to-share URLs. Simply paste your link, click 'Shorten URL,' and your new link is ready to be shared across all your social media platforms, emails, and more.</p>
+    <main>
+      <div class="container">
+        <h1>Free URL <span style="color: #37a0fb">Shortener</span></h1>
+        <p class="para">
+          Flink is a Free tool to shortenURLs. Create a short & memorable links
+          in seconds.
+        </p>
+        <form method="POST" action="/url">
+          <input type="text" placeholder="Enter link here" name="url" />
+          <button class="short" type="submit">Shorten URL</button>
+        </form>
+        <div class="result">
+          <% if(locals.id) { %>
+          <p class="sh-url">
+            <a target="_blank" href="https://flink-n946.onrender.com/<%= id %>"
+              >flink.ly/<%= id %></a
+            >
+          </p>
+          <p class="copy" id="copyButton">Copy</p>
+          <% } else { %>
+          <p class="sh-url">
+            <a target="_blank" href="https://flink-n946.onrender.com/YHRul4nLv"
+              >flink.ly/YHRul4nLv</a
+            >
+          </p>
+          <p class="copy" id="copyButton">Copy</p>
+          <% } %>
+        </div>
+        <p class="para p2">
+          By clicking Shorten URL, you agree to our <u>Terms of Use</u>,
+          <u>Privacy Policy</u> and <u>Cookie Policy</u>
+        </p>
       </div>
-    
-      <!-- Section 2: Why Use Our URL Shortener? -->
+      <div class="description">
+        <div class="left">
+          <h2>A fast and simple URL shortener</h2>
+          <p>
+            Free URL Shortener for transforming long, ugly links into nice,
+            memorable and trackable short URLs. Use it to shorten links for any
+            social media platforms, blogs, SMS, emails, ads, or pretty much
+            anywhere else you want to share them. Twitter, Facebook, YouTube,
+            Instagram, WhatsApp, emails, SMS, videos. RB.GY is the best free
+            alternative to generic URL shorteners like bitly and tinyurl. After
+            shorterning the URL, check how many clicks it received.
+          </p>
+        </div>
+        <div class="right">
+          <img src="/assets/link.png" alt="link-png" height="120" />
+          <p>
+            Experience the <b>benefits of link</b> management for your business
+          </p>
+        </div>
+      </div>
+      <div class="section section-dark">
+        <h2>How It Works</h2>
+        <p>
+          Our URL shortener takes your long, unwieldy links and transforms them
+          into short, easy-to-share URLs. Simply paste your link, click 'Shorten
+          URL,' and your new link is ready to be shared across all your social
+          media platforms, emails, and more.
+        </p>
+      </div>
+
       <div class="section section-light">
         <h2>Why Use Our URL Shortener?</h2>
         <ul>
@@ -73,11 +125,13 @@
           <li>- Completely free to use</li>
         </ul>
       </div>
-    
-      <!-- Section 3: Features -->
+
       <div class="section section-dark">
         <h2>Features</h2>
-        <p>Our service is packed with features that make managing and sharing your URLs simple and efficient:</p>
+        <p>
+          Our service is packed with features that make managing and sharing
+          your URLs simple and efficient:
+        </p>
         <ul>
           <li>- Easy URL management dashboard</li>
           <li>- Real-time analytics to track clicks and engagement</li>
@@ -86,34 +140,42 @@
           <li>- Mobile-friendly interface</li>
         </ul>
       </div>
-    
-      <!-- Section 4: Security -->
+
       <div class="section section-light">
         <h2>Security</h2>
-        <p>We take your security seriously. Our URL shortener is designed with multiple layers of protection to ensure your links are safe and secure. Every link you create is encrypted, and we offer options to add password protection to your URLs.</p>
-      </div>
-    
-      <!-- Section 5: Get Started -->
-      <div class="section section-dark last">
-        <h2>Get Started Now</h2>
-        <p>Ready to start shortening your URLs? Simply enter your long URL above and click 'Shorten URL' to get started. It’s fast, easy, and completely free!</p>
+        <p>
+          We take your security seriously. Our URL shortener is designed with
+          multiple layers of protection to ensure your links are safe and
+          secure. Every link you create is encrypted, and we offer options to
+          add password protection to your URLs.
+        </p>
       </div>
 
+      <div class="section section-dark last">
+        <h2>Get Started Now</h2>
+        <p>
+          Ready to start shortening your URLs? Simply enter your long URL above
+          and click 'Shorten URL' to get started. It’s fast, easy, and
+          completely free!
+        </p>
+      </div>
+    </main>
+
     <footer>
-        <div class="footer">
-            <div class="left-side">
-                <p>Terms & Conditions</p>
-                <p>Privacy Policy</p>
-                <p>Cookie Policy</p>
-                <p>Anti Spam Policy</p>
-                <p>Report abuse</p>
-            </div>
-            <div class="right-side">
-                <p>Rebrandly &copy; Copyright 2024</p>
-            </div>
+      <div class="footer">
+        <div class="left-side">
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Cookie Policy</p>
+          <p>Anti Spam Policy</p>
+          <p>Report abuse</p>
         </div>
+        <div class="right-side">
+          <p>Rebrandly &copy; Copyright 2024</p>
+        </div>
+      </div>
     </footer>
 
     <script src="/JS/script.js"></script>
-</body>
+  </body>
 </html>

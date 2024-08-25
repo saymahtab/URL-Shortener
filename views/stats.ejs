@@ -7,59 +7,149 @@
     <link rel="stylesheet" href="/CSS/stats.css">
     <link rel="shortcut icon" href="/assets/link.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/stats">Stats</a></li>
-                <li><a href="/myUrls">myUrls</a></li>
-            </ul>
+    <header>
+        <nav class="nav-bar">
+          <div class="menu-icon">
+              <i class="fas fa-bars"></i>
+          </div>
+          <div class="logo">
+            <a href="/"><img src="/assets/Flink2.png" alt="png" height="60" /></a>
+          </div>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/myUrls">myUrls</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="/login" class="button-link">Login</a>
+            <a href="/signup" class="button-link">Signup</a>
+          </div>
         </nav>
-        <h1>Track your <span style="color: #3898ec;">short URLs</span></h1>
-        <p class="para">Enter the URL to find out how many clicks it has received so far. Example: localhost/pjzjsl</p>
-        <form method="POST" action="/url/stats">
-            <input 
-                type="text" 
-                placeholder="Enter link here"
-                name="url"
-            >
-            <button class="short" type="submit">View Clicks</button>
-        </form>
-    </div>
-    <% if(locals.url) { %>
-    <div class="stats">
-        <h1>Stats</h1>
-        <table>
-            <tr>
-                <th>Name</th>
-                <td><%= url.redirectURL %></td>
-            </tr>
-            <tr>
-                <th>Total Clicks</th>
-                <td><%= url.visitHistory.length %></td>
-            </tr>
-            <% if(url.visitHistory.length != 0) { %>
-            <tr>
-                <th>Last Click</th>
-                <td><%= url.visitHistory[url.visitHistory.length - 1].timeStamp %></td>
-            </tr>
-            <% } %>
-        </table>
-    </div>
-    <% } %>
-    <div class="description">
-        <div class="left">
-            <h2>How to track your links</h2>
-            <p>Once you have created and shared the short URL,  just add symbol “+” to the end of it and you will get real-time analytics showing the numbers of clicks received from your shortened URL.
-                Click here to see an example: rb.gy/pjzjsl+</p>
+      </header>
+
+      <div class="side-bar">
+        <div class="icon-logo">
+            <div class="side-bar-logo">
+                <a href="/"><img src="/assets/Flink2.png" alt="png" height="60" /></a>
+            </div>
+            <div class="cross-icon">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
-        <div class="right">
-            <img src="/assets/link.png" alt="link-png" height="120">
-            <p>Experience the <b>benefits of link</b> management for your business</p>
-        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/myUrls">myUrls</a></li>
+        </ul>
+        <div class="side-bar-buttons">
+            <a href="/login" class="button-link">Login</a>
+            <a href="/signup" class="button-link">Signup</a>
+          </div>
     </div>
+
+    <main>
+        <div class="container">
+            <h1>Track your <span style="color: #3898ec;">short URLs</span></h1>
+            <p class="para">Enter the URL to find out how many clicks it has received so far. Example: localhost/pjzjsl</p>
+            <form method="POST" action="/url/stats">
+                <input 
+                    type="text" 
+                    placeholder="Enter link here"
+                    name="url"
+                >
+                <button class="short" type="submit">View Clicks</button>
+            </form>
+        </div>
+        <% if(locals.url) { %>
+        <div class="stats">
+            <h1>Stats</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><%= url.redirectURL %></td>
+                </tr>
+                <tr>
+                    <th>Total Clicks</th>
+                    <td><%= url.visitHistory.length %></td>
+                </tr>
+                <% if(url.visitHistory.length != 0) { %>
+                <tr>
+                    <th>Last Click</th>
+                    <td><%= url.visitHistory[url.visitHistory.length - 1].timeStamp %></td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+        <% } %>
+        <div class="description">
+            <div class="left">
+                <h2>How to track your links</h2>
+                <p>Once you have created and shared the short URL,  just add symbol “+” to the end of it and you will get real-time analytics showing the numbers of clicks received from your shortened URL.
+                    Click here to see an example: rb.gy/pjzjsl+</p>
+            </div>
+            <div class="right">
+                <img src="/assets/link.png" alt="link-png" height="120">
+                <p>Experience the <b>benefits of link</b> management for your business</p>
+            </div>
+        </div>
+        <div class="section section-dark">
+            <h2>How It Works</h2>
+            <p>
+              Our URL shortener takes your long, unwieldy links and transforms them
+              into short, easy-to-share URLs. Simply paste your link, click 'Shorten
+              URL,' and your new link is ready to be shared across all your social
+              media platforms, emails, and more.
+            </p>
+          </div>
+    
+          <div class="section section-light">
+            <h2>Why Use Our URL Shortener?</h2>
+            <ul>
+              <li>- Shorten long URLs with ease</li>
+              <li>- Track the performance of your links</li>
+              <li>- Customize your short URLs for branding</li>
+              <li>- Completely free to use</li>
+            </ul>
+          </div>
+    
+          <div class="section section-dark">
+            <h2>Features</h2>
+            <p>
+              Our service is packed with features that make managing and sharing
+              your URLs simple and efficient:
+            </p>
+            <ul>
+              <li>- Easy URL management dashboard</li>
+              <li>- Real-time analytics to track clicks and engagement</li>
+              <li>- API access for developers</li>
+              <li>- Customizable short URLs</li>
+              <li>- Mobile-friendly interface</li>
+            </ul>
+          </div>
+    
+          <div class="section section-light">
+            <h2>Security</h2>
+            <p>
+              We take your security seriously. Our URL shortener is designed with
+              multiple layers of protection to ensure your links are safe and
+              secure. Every link you create is encrypted, and we offer options to
+              add password protection to your URLs.
+            </p>
+          </div>
+    
+          <div class="section section-dark last">
+            <h2>Get Started Now</h2>
+            <p>
+              Ready to start shortening your URLs? Simply enter your long URL above
+              and click 'Shorten URL' to get started. It’s fast, easy, and
+              completely free!
+            </p>
+          </div>
+    </main>
+
     <footer>
         <div class="footer">
             <div class="left-side">
@@ -74,5 +164,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="/JS/script1.js"></script>
 </body>
 </html>
