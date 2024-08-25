@@ -368,6 +368,9 @@ input:focus {
     .nav-buttons {
         display: none;
     }
+    .nav-bar li {
+        margin: 1.4rem;
+    }
     .nav-bar ul {
         margin: 0 auto;
     }

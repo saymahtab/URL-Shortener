@@ -98,7 +98,7 @@ li a:hover {
     background-color: #05223e;
     width: 15rem;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     z-index: 20;
     padding: 10px;
     left: -17rem;
@@ -119,7 +119,7 @@ li a:hover {
     height: 3rem;
     margin : 0.9rem 0;
 }
-.side-bar ul li {
+.side-bar ul li{
     padding: 1rem 0;
     background-color: #077dfc87;
     margin: 0.8rem 0;
@@ -423,6 +423,9 @@ input:focus {
     }
     .logo {
         display: none;
+    }
+    .nav-bar li {
+        margin: 1.4rem;
     }
     .nav-buttons {
         display: none;
