@@ -227,6 +227,65 @@ input:focus {
 .short:hover {
     background-color: #1d7dd2;
 }
+.stats {
+    background-color: #fff;
+    width: 95%;
+    margin: 2rem auto;
+    color: #f0f0f0;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #133552;
+    margin-top: 7rem;
+}
+
+.stats:hover {
+    transform: translateY(-5px);
+}
+
+.stats h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    color: #133552;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+th, td {
+    text-align: left;
+    font-size: 1rem;
+    padding: 12px 18px;
+    color: #333;
+}
+
+th {
+    color: #1e3a56;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 20%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.stats p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #d1e7ff;
+    font-style: italic;
+}
 .description {
     display: flex;
     align-items: flex-start;
@@ -429,4 +488,56 @@ input:focus {
     .section ul li, .section p {
         font-size: 0.8rem;
     }
+    .stats {
+        background-color: #fff;
+        width: 95%;
+        margin: 0 auto;
+        color: #f0f0f0;
+        padding: 1rem 1rem;
+        border-radius: 12px;
+        transition: transform 0.3s ease-in-out;
+        border: 1px solid #133552;
+        margin-top: 5rem;
+    }
+    
+    .stats:hover {
+        transform: translateY(-5px);
+    }
+    
+    .stats h1 {
+        font-weight: 700;
+        font-size: 2.2rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        margin-top: 0;
+        color: #133552;
+        text-transform: uppercase;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: transparent;
+    }
+    
+    th, td {
+        text-align: left;
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+        color: #333;
+    }
+    
+    th {
+        color: #1e3a56;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 20%;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    td {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+    }
 }
+

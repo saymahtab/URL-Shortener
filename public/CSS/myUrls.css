@@ -1,29 +1,44 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.nav-container {
-    background-color: #133552;
-    color: #fff;
-    height: 5rem;
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
 }
-nav ul {
+header {
+    background-color: #133552;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+.menu-icon {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 28px;
+    display: none;
+}
+.nav-bar .logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav-bar ul {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
-    flex-wrap: wrap;
 }
-nav ul li {
+.nav-bar li {
     padding: 0 1rem;
     margin: 2rem 0;
 }
@@ -34,10 +49,126 @@ li a {
 li a:hover {
     color: #3898ec;
 }
-h1 {
-    font-size: 2.3rem;
-    margin: 24px;
-    margin-bottom: 32px;
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+.nav-buttons a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.nav-buttons a:hover {
+    background-color: #00AEEF;
+}
+.nav-buttons a:hover {
+    color: #001F3F;
+}
+
+.nav-buttons a:first-child {
+    border-color: #007BFF;
+}
+
+.nav-buttons a:first-child:hover {
+    background-color: #007BFF;
+}
+
+.nav-buttons a:last-child {
+    border-color: #FF4136;
+}
+
+.nav-buttons a:last-child:hover {
+    background-color: #FF4136;
+}
+
+
+
+/* side-bar styles */
+
+.side-bar {
+    background-color: #05223e;
+    width: 15rem;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    padding: 10px;
+    left: -17rem;
+    transition: 0.2s ease-in-out;
+}
+.icon-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cross-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.2rem;
+}
+.side-bar-logo img{
+    height: 3rem;
+    margin : 0.9rem 0;
+}
+.side-bar ul li{
+    padding: 1rem 0;
+    background-color: #077dfc87;
+    margin: 0.8rem 0;
+    list-style-type: none;
+    border-radius: 5px;
+}
+.side-bar ul li:hover {
+    background-color: #007BFF;
+}
+.side-bar-buttons {
+    margin-top: 3rem;
+}
+.side-bar-buttons  a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 0 7px;
+}
+.side-bar-buttons a:hover {
+    background-color: #00AEEF;
+}
+.side-bar-buttons a:hover {
+    color: #001F3F;
+}
+
+.side-bar-buttons a:first-child {
+    border-color: #007BFF;
+}
+
+.side-bar-buttons a:first-child:hover {
+    background-color: #007BFF;
+}
+
+.side-bar-buttons a:last-child {
+    border-color: #FF4136;
+}
+
+.side-bar-buttons a:last-child:hover {
+    background-color: #FF4136;
 }
 
 .container {
@@ -48,6 +179,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     color: #333;
+    margin-top: 8rem;
 }
 
 .title {
@@ -97,17 +229,44 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+    .nav-bar li {
+        margin: 1.7rem 0;
+    }
+    .nav-buttons {
+        display: none;
+    }
     .container {
-        padding: 10px;
-        margin: 10px;
+        padding: 0.5rem;
+    }
+    .nav-bar ul {
+        margin: 0 auto;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .result {
+        align-items: flex-start;
+        width: 94%;
+    }
+    .description {
+        flex-direction: column;
+    }
+    .nav-bar ul {
+        visibility: hidden;
+    }
+    .left, .right {
+        padding: 1rem;
+        height: fit-content;
     }
 
-    .title {
-        font-size: 1.8rem;
+    .left-side {
+        flex-direction: column;
     }
-
-    .urls-table th, .urls-table td {
-        padding: 8px;
+    .footer {
+        font-size: 0.8rem;
     }
 }
 
